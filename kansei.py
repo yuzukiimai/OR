@@ -41,8 +41,10 @@ def or_func1(x1, x2, x3):
                   [1,0,0],
                   [1,0,1],
                   [1,1,0],
-                  [1,1,1]])  
+                  [1,1,1]])
+    
     a = w[0]*x1 + w[1]*x2 + w[2]*x3
+    
     if a > 0:               
         return 1
     else:
@@ -119,7 +121,7 @@ for e in range(epoch):
   i += 1
 
 
-  
+#学習後の混同行列用
 def or_func2(x1, x2, x3):
     X = np.array([[0,0,0],
                   [0,1,0],
@@ -131,6 +133,7 @@ def or_func2(x1, x2, x3):
                   [1,1,1]])
       
     b = w[0]*x1 + w[1]*x2 + w[2]*x3
+    
     if b > 0:               
         return 1
     else:
